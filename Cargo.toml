@@ -1,5 +1,5 @@
 [workspace]
-members = ["crates/picker", "crates/tab_switcher"]
+members = ["crates/picker", "crates/tab_switcher", "crates/welcome"]
 resolver = "2"
 
 [workspace.dependencies]
@@ -9,6 +9,7 @@ resolver = "2"
 
 picker = { path = "crates/picker" }
 tab_switcher = { path = "crates/tab_switcher" }
+welcome = { path = "crates/welcome" }
 
 anyhow = "1.0.86"
 collections = { git = "https://github.com/zed-industries/zed.git" }
