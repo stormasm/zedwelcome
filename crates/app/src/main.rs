@@ -15,6 +15,7 @@ actions!(main_menu, [Quit]);
 
 fn init(_app_state: Arc<AppState>, cx: &mut AppContext) -> Result<()> {
     settings::init(cx);
+    tab_switcher::init(cx);
     //command_palette::init(cx);
     //story_workspace::init(app_state.clone(), cx);
 
