@@ -1,5 +1,12 @@
 [workspace]
-members = ["crates/picker", "crates/tab_switcher", "crates/welcome"]
+members = [
+    "crates/app",
+    "crates/picker",
+    "crates/tab_switcher",
+    "crates/welcome",
+]
+
+default-members = ["crates/app"]
 resolver = "2"
 
 [workspace.dependencies]
@@ -16,6 +23,7 @@ client = { git = "https://github.com/zed-industries/zed.git" }
 collections = { git = "https://github.com/zed-industries/zed.git" }
 db = { git = "https://github.com/zed-industries/zed.git" }
 gpui = { git = "https://github.com/zed-industries/zed.git" }
+log = "0.4"
 menu = { git = "https://github.com/zed-industries/zed.git" }
 schemars = { version = "0.8", features = ["impl_json_schema"] }
 serde = { version = "1.0", features = ["derive", "rc"] }

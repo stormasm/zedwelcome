@@ -7738,6 +7738,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "welcome-app"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "gpui",
+ "log",
+ "rust-embed",
+ "serde",
+ "settings",
+ "ui",
+ "workspace",
+]
+
+[[package]]
 name = "which"
 version = "4.4.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
