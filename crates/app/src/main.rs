@@ -6,6 +6,7 @@ use assets::Assets;
 use gpui::{actions, App, AppContext, KeyBinding, Menu, MenuItem};
 use settings::KeymapFile;
 //use ui::input::{Copy, Cut, Paste, Redo, Undo};
+use welcome::{show_welcome_view, BaseKeymap, FIRST_OPEN};
 
 mod app_state;
 mod assets;
@@ -16,6 +17,7 @@ actions!(main_menu, [Quit]);
 fn init(_app_state: Arc<AppState>, cx: &mut AppContext) -> Result<()> {
     settings::init(cx);
     tab_switcher::init(cx);
+    welcome::init(cx);
     //command_palette::init(cx);
     //story_workspace::init(app_state.clone(), cx);
 
@@ -58,6 +60,7 @@ fn main() {
             },
         ]);
         cx.activate(true);
+        cx.update(|cx| show_welcome_view(app_state, cx));
 
         /*
         story_workspace::open_new(app_state.clone(), cx, |_workspace, _cx| {
